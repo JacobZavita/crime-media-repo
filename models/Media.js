@@ -1,9 +1,14 @@
 const { model, Schema } = require('mongoose')
 
 const Media = new Schema({
-  label: String,
+  title: String,
   description: String,
-  tags: String
+  tags: String,
+  identity_topics: Array,
+  cls_topics: Array,
+  source: String,
+  type: String,
+  creators: Object
 })
 
 module.exports = model('Media', Media)
